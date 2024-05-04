@@ -93,3 +93,7 @@ fastlane/test_output
 
 iOSInjectionProject/
 .DS_Store
+
+
+PhotoStudioAI/RemoveBG
+PhotoStudioAI/RemoveBG/
