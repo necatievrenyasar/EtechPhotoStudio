@@ -27,7 +27,7 @@ struct LayerControllerChangeBGImage: View {
 extension LayerControllerChangeBGImage {
     
     var content: some View {
-        VStack {
+        VStack(spacing:0) {
             LayerHeader(title: "Choose your background image") {
                 
             }
@@ -39,15 +39,13 @@ extension LayerControllerChangeBGImage {
                     showingImagePicker = true
                 }
             }
-            .padding(.top, 24)
+            .padding(.top, 16)
         }
-        .padding(.horizontal, 16)
-        .padding(.bottom, 16)
-        .background(Color.gray1)
+        .padding(.horizontal, Constants.Padding.horizontal)
+        .padding(.bottom, Constants.Padding.sheetBottom)
+        .background(
+            Color.sheetBg
+        )
     }
 }
-/*
-#Preview {
-    LayerControllerChangeBGImage()
-}
-*/
+

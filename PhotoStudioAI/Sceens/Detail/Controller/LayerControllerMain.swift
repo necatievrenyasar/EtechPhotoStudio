@@ -44,8 +44,10 @@ struct LayerControllerMain: View {
             //Text("\(layer.shadow.size)")
             Color.white.opacity(0.0001).frame(height: 20)
             
-        }.background(
-            Color(.gray1)
+        }
+        .padding(.bottom, Constants.Padding.sheetBottom)
+        .background(
+            Color(.sheetBg)
         )
     }
 }

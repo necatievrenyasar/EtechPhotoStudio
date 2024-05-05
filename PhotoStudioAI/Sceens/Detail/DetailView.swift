@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import BottomSheet
 
 enum LayerControllerType {
     case colorBg
@@ -30,6 +31,7 @@ struct DetailView: View {
     @State private var outline: Bool = false
     @State private var layerController: LayerControllerType = .none
     @State private var layerControllerId = UUID().uuidString
+    @State private var bottomSheetPosition = BottomSheetPosition.dynamic
     private let imagePedding: CGFloat = 24
     let model: ProductModel
     @State var isDraw = false
@@ -56,7 +58,6 @@ extension DetailView {
             Color(.white1).edgesIgnoringSafeArea(.all)
             //Color(hex: selectedProductLayer.color ?? "aaaaaa").frame(height: 40)
             VStack {
-              
                 
                 topController
                     .padding(.top, 24)
@@ -123,18 +124,22 @@ extension DetailView {
     
     @ViewBuilder
     func layerControllers() -> some View {
-        switch layerController {
-        case .main:
-            mainLayer
-        case .colorBg:
-            colorfullLayer
-        case .imageBg:
-            imageBackgroundLayer
-        case .target:
-            targetLayer
-        default:
-            Color.red.frame(height: 2)
-        }
+        Color.yellow.frame(height: 1)
+            .bottomSheet(bottomSheetPosition: $bottomSheetPosition,
+                         switchablePositions: [BottomSheetPosition.dynamic]) {
+                switch layerController {
+                case .main:
+                    mainLayer
+                case .colorBg:
+                    colorfullLayer
+                case .imageBg:
+                    imageBackgroundLayer
+                case .target:
+                    targetLayer
+                default:
+                    Color.red.frame(height: 2)
+                }
+            }
     }
     
     

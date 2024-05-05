@@ -48,13 +48,14 @@ extension LayerControllerTarget {
                 
             } label: {
                 Label("Delete", systemImage: "trash.fill")
-            }.frame(height: 60)
+            }
+            .frame(height: 40)
         }
-        .padding(.horizontal, 16)
+        .padding(.bottom, Constants.Padding.sheetBottom)
         .background(
-            Color.gray1
+            Color.sheetBg
         )
-        
+        .padding(.horizontal, 16)
     }
     
 }

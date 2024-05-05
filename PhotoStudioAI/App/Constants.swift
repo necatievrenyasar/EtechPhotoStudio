@@ -12,4 +12,9 @@ struct Constants {
         static let imageUrl = "https://gameserver.nyc3.digitaloceanspaces.com/studio/"
     }
     
+    
+    struct Padding {
+        static let sheetBottom: CGFloat = 42
+        static let horizontal: CGFloat = 16
+    }
 }

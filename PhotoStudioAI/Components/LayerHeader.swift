@@ -25,6 +25,8 @@ struct LayerHeader: View {
             } label: {
                 Text("Done")
             }
-        }.padding(.vertical, 16)
+        }
+        .padding(.bottom, 16)
+        
     }
 }

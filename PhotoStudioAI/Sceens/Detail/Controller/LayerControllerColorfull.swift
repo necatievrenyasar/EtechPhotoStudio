@@ -30,8 +30,10 @@ extension LayerControllerColorfull {
             }
             colorList
         }
-        .padding(.horizontal, 16)
-        .background(Color.gray1)
+        .padding(.bottom, Constants.Padding.sheetBottom)
+        .background(
+            Color.sheetBg
+        )
     }
     
     

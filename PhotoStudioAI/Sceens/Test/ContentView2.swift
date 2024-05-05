@@ -6,20 +6,40 @@
 //
 
 import SwiftUI
+import BottomSheet
 
 struct ContentView2: View {
     @State var data: [Home] = [.init(name: "Evren"), .init(name: "Yasar"), .init(name: "Necati")]
-
+@State var showA = false
+    @State var bottomSheetPosition: BottomSheetPosition = BottomSheetPosition.dynamic
+    
     var body: some View {
         VStack {
-         
-            List(data, id: \.id) { person in
-                //Text(person.person.name)
-                FakeRow1(model: person.person)
+            Button {
+                showA.toggle()
+                print("Test")
+            } label: {
+                Text("Test")
             }
+
+            Color.red.frame(height: 100)
+                .bottomSheet(bottomSheetPosition: $bottomSheetPosition,
+                             switchablePositions: [.dynamic]) {
+                    if showA {
+                        Color.yellow.frame(height: 200)
+                    }else {
+                        Color.red.frame(height: 100)
+                    }
+                    
+                }
         }
     }
 }
+
+#Preview(body: {
+    ContentView2()
+})
+
 
 struct FakeRow1:View {
     @ObservedObject var model: PersonModel
