@@ -66,6 +66,13 @@ extension HomeView {
                                 .onTapGesture {
                                     selectedItem = item
                                     showDetail = true
+                                }.overlay {
+                                    let pro = item.pro ?? true
+                                    if pro {
+                                        proLogo
+                                    }else {
+                                        EmptyView()
+                                    }
                                 }
                             }
                         }.padding(.leading, 15)
@@ -75,6 +82,22 @@ extension HomeView {
         }
     }
     
+    var proLogo: some View {
+        HStack {
+            Spacer()
+            VStack {
+                Text("Pro")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(.white)
+                    .padding(.vertical, 1)
+                    .padding(.horizontal, 4)
+                    .background(
+                        Color(.primary).cornerRadius(6)
+                    ).padding(4)
+                Spacer()
+            }
+        }
+    }
     
     @ViewBuilder
     func getPlaceHolder() -> some View {
