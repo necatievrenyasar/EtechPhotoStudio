@@ -12,7 +12,6 @@ struct MainTabView: View {
     
     var body: some View {
         TabView {
-            
             Group {
                 HomeView()
                     .tabItem {
@@ -44,13 +43,10 @@ struct MainTabView: View {
             }
             .toolbarBackground(Color(.white), for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
-           
         }
-       
         .accentColor(Color(.primary))
-        
-        
     }
+    
 }
 
 #Preview {

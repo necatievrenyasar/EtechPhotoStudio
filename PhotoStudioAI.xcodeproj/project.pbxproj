@@ -45,6 +45,12 @@
 		B211B8A92BA9D95D0097AD0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211B8A82BA9D95D0097AD0A /* Constants.swift */; };
 		B211B8AC2BA9D9FD0097AD0A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B211B8AB2BA9D9FD0097AD0A /* SDWebImageSwiftUI */; };
 		B211B8AF2BA9DC5C0097AD0A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211B8AE2BA9DC5C0097AD0A /* DetailView.swift */; };
+		B23FC8012BE825F800CB2DC5 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8002BE825F800CB2DC5 /* ReceiptParser */; };
+		B23FC8032BE825F800CB2DC5 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8022BE825F800CB2DC5 /* RevenueCat */; };
+		B23FC8052BE825F800CB2DC5 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8042BE825F800CB2DC5 /* RevenueCatUI */; };
+		B23FC8072BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8062BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation */; };
+		B23FC80A2BE8261C00CB2DC5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23FC8092BE8261C00CB2DC5 /* StoreKit.framework */; };
+		B23FC80C2BE8297B00CB2DC5 /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FC80B2BE8297B00CB2DC5 /* InAppPurchaseManager.swift */; };
 		B254F5042BBEC8B300C71392 /* RMBG.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = B254F5032BBEC8B300C71392 /* RMBG.mlpackage */; };
 		B254F5072BBECB3C00C71392 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254F5062BBECB3C00C71392 /* ImageViewModel.swift */; };
 		B254F5092BBECB4F00C71392 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254F5082BBECB4F00C71392 /* ContentView2.swift */; };
@@ -104,6 +110,8 @@
 		B211B89D2BA8AE460097AD0A /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
 		B211B8A82BA9D95D0097AD0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B211B8AE2BA9DC5C0097AD0A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B23FC8092BE8261C00CB2DC5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B23FC80B2BE8297B00CB2DC5 /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
 		B254F5032BBEC8B300C71392 /* RMBG.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RMBG.mlpackage; sourceTree = "<group>"; };
 		B254F5062BBECB3C00C71392 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		B254F5082BBECB4F00C71392 /* ContentView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
@@ -136,13 +144,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23FC8012BE825F800CB2DC5 /* ReceiptParser in Frameworks */,
 				B211B8AC2BA9D9FD0097AD0A /* SDWebImageSwiftUI in Frameworks */,
+				B23FC8032BE825F800CB2DC5 /* RevenueCat in Frameworks */,
+				B23FC8052BE825F800CB2DC5 /* RevenueCatUI in Frameworks */,
 				B25A8C042BC7B28500D61992 /* BottomSheet in Frameworks */,
 				B211B8882BA6F8BE0097AD0A /* FirebaseMessaging in Frameworks */,
 				B211B8862BA6F8BE0097AD0A /* FirebaseFirestoreSwift in Frameworks */,
+				B23FC8072BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation in Frameworks */,
 				B211B8802BA6F8BE0097AD0A /* FirebaseAppCheck in Frameworks */,
 				B211B8842BA6F8BE0097AD0A /* FirebaseCrashlytics in Frameworks */,
 				B211B8822BA6F8BE0097AD0A /* FirebaseAuth in Frameworks */,
+				B23FC80A2BE8261C00CB2DC5 /* StoreKit.framework in Frameworks */,
 				B211B87E2BA6F8BE0097AD0A /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +231,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		B23FC8082BE8261C00CB2DC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B23FC8092BE8261C00CB2DC5 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B254F5052BBECB3300C71392 /* Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +278,7 @@
 			children = (
 				B27BE35E2B87C87D0099094E /* PhotoStudioAI */,
 				B27BE35D2B87C87D0099094E /* Products */,
+				B23FC8082BE8261C00CB2DC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,6 +332,7 @@
 				B211B89B2BA8AE190097AD0A /* ProductManager.swift */,
 				B211B89D2BA8AE460097AD0A /* ConfigManager.swift */,
 				B20284172BB5978400F460BA /* PhotoPicker.swift */,
+				B23FC80B2BE8297B00CB2DC5 /* InAppPurchaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -381,6 +404,10 @@
 				B211B8872BA6F8BE0097AD0A /* FirebaseMessaging */,
 				B211B8AB2BA9D9FD0097AD0A /* SDWebImageSwiftUI */,
 				B25A8C032BC7B28500D61992 /* BottomSheet */,
+				B23FC8002BE825F800CB2DC5 /* ReceiptParser */,
+				B23FC8022BE825F800CB2DC5 /* RevenueCat */,
+				B23FC8042BE825F800CB2DC5 /* RevenueCatUI */,
+				B23FC8062BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation */,
 			);
 			productName = PhotoStudioAI;
 			productReference = B27BE35C2B87C87D0099094E /* PhotoStudioAI.app */;
@@ -414,6 +441,7 @@
 				B211B87C2BA6F8BE0097AD0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B211B8AA2BA9D9FD0097AD0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				B25A8C022BC7B28500D61992 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 			);
 			productRefGroup = B27BE35D2B87C87D0099094E /* Products */;
 			projectDirPath = "";
@@ -452,6 +480,7 @@
 				B202840B2BB5663E00F460BA /* CVPixelBuffer+Resize.swift in Sources */,
 				B211B88B2BA6F8EC0097AD0A /* AppDelegate.swift in Sources */,
 				B27BE3712B87C95A0099094E /* AppManager.swift in Sources */,
+				B23FC80C2BE8297B00CB2DC5 /* InAppPurchaseManager.swift in Sources */,
 				B2E19EBA2BE01D6D00327CE4 /* ShadowToggle.swift in Sources */,
 				B20284112BB5663E00F460BA /* NonMaxSuppression.swift in Sources */,
 				B264BF6C2BBB264000388D30 /* BigButton.swift in Sources */,
@@ -725,6 +754,14 @@
 				minimumVersion = 3.0.1;
 			};
 		};
+		B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.41.1;
+			};
+		};
 		B25A8C022BC7B28500D61992 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lucaszischka/BottomSheet";
@@ -770,6 +807,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B211B8AA2BA9D9FD0097AD0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		B23FC8002BE825F800CB2DC5 /* ReceiptParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = ReceiptParser;
+		};
+		B23FC8022BE825F800CB2DC5 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		B23FC8042BE825F800CB2DC5 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCatUI;
+		};
+		B23FC8062BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat_CustomEntitlementComputation;
 		};
 		B25A8C032BC7B28500D61992 /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;

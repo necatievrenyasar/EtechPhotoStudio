@@ -16,6 +16,9 @@ struct PhotoStudioAIApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .onAppear {
+                    InAppPurchaseManager.config()
+                }
             //ContentView2()
             //Fake2()
             //ContentView2()
@@ -23,14 +26,5 @@ struct PhotoStudioAIApp: App {
             //Fake()
             //ContentView1()
         }
-    }
-}
-
-
-struct Fake2: View {
-    var body: some View {
-        VStack {
-            Image(uiImage: UIImage(named: "pngegg")!.stroked(thickness: 10) )
-        }.background(Color.yellow)
     }
 }
