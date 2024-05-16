@@ -23,6 +23,8 @@ struct HomeView: View {
                 }.fullScreenCover(item: $selectedItem) { product in
                     DetailView(model: product)
                 }
+        }.onAppear {
+            PayManager.shared.getProductList()
         }
     }
     

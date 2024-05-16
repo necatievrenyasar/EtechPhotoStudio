@@ -17,6 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         AppCheck.setAppCheckProviderFactory(providerFactory)
         
         FirebaseApp.configure()
+        PayManager.shared.setupRevenueCat()
         
         return true
     }

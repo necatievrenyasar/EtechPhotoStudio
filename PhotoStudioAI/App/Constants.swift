@@ -8,6 +8,10 @@
 import Foundation
 struct Constants {
     
+    struct ApiKey {
+        static let revenueCat = "appl_niNYXeARXFtpscSXqGsSxnbYkYx"
+    }
+    
     struct Server {
         static let imageUrl = "https://gameserver.nyc3.digitaloceanspaces.com/studio/"
     }

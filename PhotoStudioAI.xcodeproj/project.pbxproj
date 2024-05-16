@@ -45,10 +45,6 @@
 		B211B8A92BA9D95D0097AD0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211B8A82BA9D95D0097AD0A /* Constants.swift */; };
 		B211B8AC2BA9D9FD0097AD0A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B211B8AB2BA9D9FD0097AD0A /* SDWebImageSwiftUI */; };
 		B211B8AF2BA9DC5C0097AD0A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211B8AE2BA9DC5C0097AD0A /* DetailView.swift */; };
-		B23FC8012BE825F800CB2DC5 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8002BE825F800CB2DC5 /* ReceiptParser */; };
-		B23FC8032BE825F800CB2DC5 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8022BE825F800CB2DC5 /* RevenueCat */; };
-		B23FC8052BE825F800CB2DC5 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8042BE825F800CB2DC5 /* RevenueCatUI */; };
-		B23FC8072BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation in Frameworks */ = {isa = PBXBuildFile; productRef = B23FC8062BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation */; };
 		B23FC80A2BE8261C00CB2DC5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23FC8092BE8261C00CB2DC5 /* StoreKit.framework */; };
 		B23FC80C2BE8297B00CB2DC5 /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FC80B2BE8297B00CB2DC5 /* InAppPurchaseManager.swift */; };
 		B254F5042BBEC8B300C71392 /* RMBG.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = B254F5032BBEC8B300C71392 /* RMBG.mlpackage */; };
@@ -73,9 +69,12 @@
 		B27BE3772B87C9AC0099094E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BE3762B87C9AC0099094E /* HomeView.swift */; };
 		B27BE3792B87C9BE0099094E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BE3782B87C9BE0099094E /* MainTabView.swift */; };
 		B27BE37B2B87C9CA0099094E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BE37A2B87C9CA0099094E /* HomeViewModel.swift */; };
+		B2BF99A22BF472B800AC7410 /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF99A12BF472B800AC7410 /* PaymentManager.swift */; };
 		B2E19EBA2BE01D6D00327CE4 /* ShadowToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E19EB92BE01D6D00327CE4 /* ShadowToggle.swift */; };
 		B2EBA6D42BE1627B000CA057 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EBA6D32BE1627B000CA057 /* String+extension.swift */; };
 		B2EBA6D62BE19F49000CA057 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EBA6D52BE19F49000CA057 /* Padding.swift */; };
+		B2F152A72BF476DB00092907 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = B2F152A62BF476DB00092907 /* RevenueCat */; };
+		B2F152A92BF476DB00092907 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = B2F152A82BF476DB00092907 /* RevenueCatUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +133,7 @@
 		B27BE3762B87C9AC0099094E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B27BE3782B87C9BE0099094E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B27BE37A2B87C9CA0099094E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B2BF99A12BF472B800AC7410 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
 		B2E19EB92BE01D6D00327CE4 /* ShadowToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowToggle.swift; sourceTree = "<group>"; };
 		B2EBA6D32BE1627B000CA057 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		B2EBA6D52BE19F49000CA057 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
@@ -144,14 +144,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23FC8012BE825F800CB2DC5 /* ReceiptParser in Frameworks */,
 				B211B8AC2BA9D9FD0097AD0A /* SDWebImageSwiftUI in Frameworks */,
-				B23FC8032BE825F800CB2DC5 /* RevenueCat in Frameworks */,
-				B23FC8052BE825F800CB2DC5 /* RevenueCatUI in Frameworks */,
 				B25A8C042BC7B28500D61992 /* BottomSheet in Frameworks */,
+				B2F152A72BF476DB00092907 /* RevenueCat in Frameworks */,
+				B2F152A92BF476DB00092907 /* RevenueCatUI in Frameworks */,
 				B211B8882BA6F8BE0097AD0A /* FirebaseMessaging in Frameworks */,
 				B211B8862BA6F8BE0097AD0A /* FirebaseFirestoreSwift in Frameworks */,
-				B23FC8072BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation in Frameworks */,
 				B211B8802BA6F8BE0097AD0A /* FirebaseAppCheck in Frameworks */,
 				B211B8842BA6F8BE0097AD0A /* FirebaseCrashlytics in Frameworks */,
 				B211B8822BA6F8BE0097AD0A /* FirebaseAuth in Frameworks */,
@@ -333,6 +331,7 @@
 				B211B89D2BA8AE460097AD0A /* ConfigManager.swift */,
 				B20284172BB5978400F460BA /* PhotoPicker.swift */,
 				B23FC80B2BE8297B00CB2DC5 /* InAppPurchaseManager.swift */,
+				B2BF99A12BF472B800AC7410 /* PaymentManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -404,10 +403,8 @@
 				B211B8872BA6F8BE0097AD0A /* FirebaseMessaging */,
 				B211B8AB2BA9D9FD0097AD0A /* SDWebImageSwiftUI */,
 				B25A8C032BC7B28500D61992 /* BottomSheet */,
-				B23FC8002BE825F800CB2DC5 /* ReceiptParser */,
-				B23FC8022BE825F800CB2DC5 /* RevenueCat */,
-				B23FC8042BE825F800CB2DC5 /* RevenueCatUI */,
-				B23FC8062BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation */,
+				B2F152A62BF476DB00092907 /* RevenueCat */,
+				B2F152A82BF476DB00092907 /* RevenueCatUI */,
 			);
 			productName = PhotoStudioAI;
 			productReference = B27BE35C2B87C87D0099094E /* PhotoStudioAI.app */;
@@ -441,7 +438,7 @@
 				B211B87C2BA6F8BE0097AD0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B211B8AA2BA9D9FD0097AD0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				B25A8C022BC7B28500D61992 /* XCRemoteSwiftPackageReference "BottomSheet" */,
-				B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+				B2F152A52BF476DB00092907 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = B27BE35D2B87C87D0099094E /* Products */;
 			projectDirPath = "";
@@ -500,6 +497,7 @@
 				B202840E2BB5663E00F460BA /* MLModel+Images.swift in Sources */,
 				B27BE3772B87C9AC0099094E /* HomeView.swift in Sources */,
 				B202840D2BB5663E00F460BA /* Math.swift in Sources */,
+				B2BF99A22BF472B800AC7410 /* PaymentManager.swift in Sources */,
 				B20284072BB5663E00F460BA /* CGImage+RawBytes.swift in Sources */,
 				B264BF682BBB1C2600388D30 /* CircleButton.swift in Sources */,
 				B211B89E2BA8AE460097AD0A /* ConfigManager.swift in Sources */,
@@ -754,20 +752,20 @@
 				minimumVersion = 3.0.1;
 			};
 		};
-		B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.41.1;
-			};
-		};
 		B25A8C022BC7B28500D61992 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lucaszischka/BottomSheet";
 			requirement = {
 				kind = exactVersion;
 				version = 3.1.1;
+			};
+		};
+		B2F152A52BF476DB00092907 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.41.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -808,30 +806,20 @@
 			package = B211B8AA2BA9D9FD0097AD0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
-		B23FC8002BE825F800CB2DC5 /* ReceiptParser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
-			productName = ReceiptParser;
-		};
-		B23FC8022BE825F800CB2DC5 /* RevenueCat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
-			productName = RevenueCat;
-		};
-		B23FC8042BE825F800CB2DC5 /* RevenueCatUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
-			productName = RevenueCatUI;
-		};
-		B23FC8062BE825F800CB2DC5 /* RevenueCat_CustomEntitlementComputation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B23FC7FF2BE825F800CB2DC5 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
-			productName = RevenueCat_CustomEntitlementComputation;
-		};
 		B25A8C032BC7B28500D61992 /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B25A8C022BC7B28500D61992 /* XCRemoteSwiftPackageReference "BottomSheet" */;
 			productName = BottomSheet;
+		};
+		B2F152A62BF476DB00092907 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2F152A52BF476DB00092907 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		B2F152A82BF476DB00092907 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2F152A52BF476DB00092907 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCatUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
