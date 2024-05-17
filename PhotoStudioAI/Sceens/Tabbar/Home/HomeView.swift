@@ -12,7 +12,7 @@ struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     @State var selectedItem: ProductModel?
     @State var showDetail = false
-    
+    @State var showPaywall = false
     var body: some View {
         NavigationView {
             content
@@ -22,6 +22,8 @@ struct HomeView: View {
                     Task { await viewModel.fetchData() }
                 }.fullScreenCover(item: $selectedItem) { product in
                     DetailView(model: product)
+                }.fullScreenCover(isPresented: $showPaywall) {
+                    PaywallView()
                 }
         }.onAppear {
             PayManager.shared.getProductList()
@@ -66,6 +68,12 @@ extension HomeView {
                                 .frame(width: 100, height: 100)
                                 .cornerRadius(8)
                                 .onTapGesture {
+                                    
+                                    if let pro = item.pro, pro {
+                                        showPaywall = true
+                                        return
+                                    }
+                                    
                                     selectedItem = item
                                     showDetail = true
                                 }.overlay {
